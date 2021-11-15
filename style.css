@@ -1,11 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    
 }
 
 body {
-    background-color: tomato;
+    background-color: violet;
+
+
+    
 }
 
 #main {
@@ -17,7 +20,7 @@ body {
 }
 
 form {
-    width: 100%;
+    width: 75%;
 }
 
 form div:first-child {
@@ -33,4 +36,7 @@ form #buttons {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    border:turquoise;
+
+    border-radius: 20px;
 }
