@@ -1,28 +1,20 @@
-const todoForm = document.getElementById("todo");
 
-const addTaskBtn = todoForm.querySelector("#addTask");
-const removeCompletedTasksBtn = todoForm.querySelector("#removeCompletedTasks");
-const removeAllTasksBtn = todoForm.querySelector("#removeAllTasks");
+var addbtn = document.querySelector(".addbtn");
+var removebtn = document.querySelector(".removebtn");
+addbtn.addEventListener('click', function() {
+  var textbar = document.getElementById("textbar");
+  var ul = document.querySelector(".appendlist");
+  var li = document.createElement("li");
+  li.setAttribute('id', textbar.value);
+  li.appendChild(document.createTextNode(textbar.value));
+  ul.appendChild(li);
+});
 
-const taskList = document.getElementById("tasks");
 
-function addTask() {
-    const taskInput = todoForm.querySelector("#task");
-
-    let task = document.createElement("li");
-    task.textContent = taskInput.value;
-    
-    taskList.appendChild(task);
-}
-
-function removeAllCompletedTasks() {
-    console.log("Task removed");
-}
-
-function removeAllTasks() {
-    console.log("All tasks removed!");
-}
-
-addTaskBtn.addEventListener("click", addTask);
-removeCompletedTasksBtn.addEventListener("click", removeAllCompletedTasks);
-removeAllTasksBtn.addEventListener("click", removeAllTasks);
+removebtn.addEventListener('click', function() {
+    var textbar = document.getElementById("textbar");
+    var ul = document.querySelector(".appendlist");
+    var items = document.getElementById(textbar.value);
+    ul.removeChild(items);
+  })
+  
